@@ -5,6 +5,13 @@
 
 #include "../src/where.hpp"
 
-TEST_CASE( "it returns Hello World" ) {
-    REQUIRE( hello() == "Hello World!" );
+TEST_CASE("find character") {
+    REQUIRE(where ("apple", 'a') == 0);
+    REQUIRE(where ("apple", 'l') == 3);
+    REQUIRE(where ("apple", 'b') == -1);
+}
+TEST_CASE("find substring") {
+    REQUIRE(where ("apple", "le") == 3);
+    REQUIRE(where ("apple", "pp") == 1);
+    REQUIRE(where ("apple", "bb") == -1);
 }

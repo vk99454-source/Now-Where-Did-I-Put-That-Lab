@@ -1,3 +1,5 @@
 #include <string>
+using namespace std;
 
-std::string hello();
+int where(string word, char character);
+int where(string word, string pattern);
